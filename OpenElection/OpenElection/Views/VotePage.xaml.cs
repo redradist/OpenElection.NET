@@ -6,9 +6,9 @@ namespace OpenElection.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class VotePage : ContentPage
 	{
-		public VotePage ()
+		public VotePage()
 		{
-			InitializeComponent ();
-		}
+            InitializeComponent();
+        }
 	}
 }
