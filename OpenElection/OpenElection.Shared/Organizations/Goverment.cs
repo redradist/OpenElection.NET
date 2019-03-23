@@ -4,7 +4,7 @@
     {
         public Goverment()
         {
-            Type = OrganizationType.Goverment;
+            Type = OrganizationType.Government;
         }
 
         public override string Name { get; set; }

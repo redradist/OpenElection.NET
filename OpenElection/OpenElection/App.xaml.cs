@@ -11,7 +11,7 @@ namespace OpenElection
 {
     public partial class App : Application
     {
-        static public IList<IOrganization> Organizations = new List<IOrganization>
+        public static IList<IOrganization> Organizations = new List<IOrganization>
         {
             new Union() { Name = "<Union>"},
             new Village() { Name = "<Village>"},

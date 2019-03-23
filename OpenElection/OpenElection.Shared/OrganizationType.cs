@@ -6,7 +6,7 @@
         Company,
         Village,
         City,
-        Goverment,
+        Government,
         Country,
         Anonymous,
     }
