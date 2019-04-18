@@ -22,6 +22,8 @@ namespace OpenElection
             new Anonymous() { Name = "<Anonymous>"},
         };
 
+        public Peer peer = new Peer();
+        
         public App()
         {
             InitializeComponent();
