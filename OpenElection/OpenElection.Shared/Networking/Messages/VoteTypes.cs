@@ -10,7 +10,7 @@ namespace OpenElection.Shared.Networking.Messages
         President,
     }
 
-    enum CityVoteType
+    public enum CityVoteType
     {
         Government,
         Mayor,
