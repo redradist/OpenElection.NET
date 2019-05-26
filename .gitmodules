@@ -1,0 +1,3 @@
+[submodule "OpenVote/OpenVote.Shared"]
+  path = OpenVote/OpenVote.Shared
+  url = https://github.com/redradist/OpenVote.Shared.git
