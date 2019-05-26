@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:xaml="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:OpenVote"
+             xaml:Class="OpenVote.Views.LoginPage"
+             Title="Login">
+    <ContentPage.Padding>
+        <OnPlatform xaml:TypeArguments="Thickness">
+            <On Platform="iOS"
+                Value="0, 20, 0, 0" />
+            <On Platform="Android, UWP"
+                Value="20, 20, 20, 20" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Resources>
+        <StyleSheet Source="/Styles/LoginPage.css" />
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Sign Up"
+                     Clicked="SignUpButton_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Label Text="Username" />
+            <Entry xaml:Name="usernameEntry"
+                   Placeholder="UserName"
+                   TextChanged="UserNameEntry_TextChanged"/>
+            <Label Text="Password" />
+            <Entry xaml:Name="passwordEntry"
+                   Placeholder="Password"
+                   IsPassword="true"
+                   IsEnabled="false" />
+            <Button Text="Login"
+                    IsEnabled="false"
+                    Clicked="LoginButton_Clicked" />
+            <Label xaml:Name="messageLabel" />
+            <Frame CornerRadius="3"
+                   BackgroundColor="#4167b2"
+                   HeightRequest="60"
+                   Margin="5, 5, 5, 5"
+                   Padding="0"
+                   HasShadow="false">
+                <StackLayout Orientation="Horizontal"
+                             Padding="5">
+                    <Image Aspect="AspectFill"
+                           HeightRequest="60"
+                           WidthRequest="60"
+                           Source="http://3daystartup.org/wp-content/uploads/2011/07/facebook-logo-png-white-facebook-logo-png-white-facebook-icon-png-32.png" />
+                    <Label Text="Login with Google"
+                           VerticalOptions="CenterAndExpand"
+                           TextColor="White"
+                           FontSize="18"
+                           FontAttributes="Bold" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer xaml:Name="GoogleLoginButton"
+                                              Tapped="GoogleLoginEntry_Tapped" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Frame>
+            <Frame CornerRadius="3"
+                   BackgroundColor="#4167b2"
+                   HeightRequest="60"
+                   Margin="5, 5, 5, 5"
+                   Padding="0"
+                   HasShadow="false">
+                <StackLayout Orientation="Horizontal"
+                             Padding="5">
+                    <Image Aspect="AspectFill"
+                           HeightRequest="60"
+                           WidthRequest="60"
+                           Source="http://3daystartup.org/wp-content/uploads/2011/07/facebook-logo-png-white-facebook-logo-png-white-facebook-icon-png-32.png" />
+                    <Label Text="Login with Facebook"
+                           VerticalOptions="CenterAndExpand"
+                           TextColor="White"
+                           FontSize="18"
+                           FontAttributes="Bold" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer xaml:Name="FacebookLoginButton"
+                                              Tapped="FacebookLoginEntry_Tapped" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

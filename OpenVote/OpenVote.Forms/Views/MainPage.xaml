@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:OpenVote"
+             x:Class="OpenVote.Views.MainPage">
+
+    <StackLayout Margin="20,100,20,100"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Center">
+        <!-- Place new controls here -->
+        <Label
+            Text="Choose your Organization by type:" 
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand" />
+        <ListView ItemsSource="{x:Static local:App.Organizations}"
+                  ItemTapped="OrganizationType_Tapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding Name}"
+                               FontAttributes="Bold" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
