@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:xaml="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:OpenVote"
-             xaml:Class="OpenVote.Views.LoginPage"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:OpenVote.Forms"
+             x:Class="OpenVote.Forms.Views.LoginPage"
              Title="Login">
     <ContentPage.Padding>
-        <OnPlatform xaml:TypeArguments="Thickness">
+        <OnPlatform x:TypeArguments="Thickness">
             <On Platform="iOS"
                 Value="0, 20, 0, 0" />
             <On Platform="Android, UWP"
@@ -22,18 +22,18 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center">
             <Label Text="Username" />
-            <Entry xaml:Name="usernameEntry"
+            <Entry x:Name="usernameEntry"
                    Placeholder="UserName"
                    TextChanged="UserNameEntry_TextChanged"/>
             <Label Text="Password" />
-            <Entry xaml:Name="passwordEntry"
+            <Entry x:Name="passwordEntry"
                    Placeholder="Password"
                    IsPassword="true"
                    IsEnabled="false" />
             <Button Text="Login"
                     IsEnabled="false"
                     Clicked="LoginButton_Clicked" />
-            <Label xaml:Name="messageLabel" />
+            <Label x:Name="messageLabel" />
             <Frame CornerRadius="3"
                    BackgroundColor="#4167b2"
                    HeightRequest="60"
@@ -52,7 +52,7 @@
                            FontSize="18"
                            FontAttributes="Bold" />
                     <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer xaml:Name="GoogleLoginButton"
+                        <TapGestureRecognizer x:Name="GoogleLoginButton"
                                               Tapped="GoogleLoginEntry_Tapped" />
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
@@ -75,7 +75,7 @@
                            FontSize="18"
                            FontAttributes="Bold" />
                     <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer xaml:Name="FacebookLoginButton"
+                        <TapGestureRecognizer x:Name="FacebookLoginButton"
                                               Tapped="FacebookLoginEntry_Tapped" />
                     </StackLayout.GestureRecognizers>
                 </StackLayout>

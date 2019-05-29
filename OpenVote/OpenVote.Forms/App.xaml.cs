@@ -1,25 +1,25 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using OpenVote.Views;
 using System.Collections.Generic;
 using OpenVote.Shared;
 using OpenVote.Shared.Organizations;
+using OpenVote.Forms.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace OpenVote
+namespace OpenVote.Forms
 {
     public partial class App : Application
     {
         public static IList<IOrganization> Organizations = new List<IOrganization>
         {
-            new Union() { Name = "<Union>"},
-            new Village() { Name = "<Village>"},
-            new City() { Name = "<City>"},
-            new Goverment() { Name = "<Goverment>"},
-            new Company() { Name = "<Company>"},
-            new Country() { Name = "<Country>"},
-            new Anonymous() { Name = "<Anonymous>"},
+            new Union() { Name = "Union"},
+            new Village() { Name = "Village"},
+            new City() { Name = "City"},
+            new Goverment() { Name = "Goverment"},
+            new Company() { Name = "Company"},
+            new Country() { Name = "Country"},
+            new Anonymous() { Name = "Anonymous"},
         };
 
         public Peer peer = new Peer();
@@ -28,7 +28,7 @@ namespace OpenVote
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new WelcomePage());
         }
 
         protected override void OnStart()

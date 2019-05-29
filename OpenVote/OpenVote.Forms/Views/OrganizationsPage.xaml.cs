@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace OpenVote.Views
+namespace OpenVote.Forms.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class OrganizationsPage : ContentPage

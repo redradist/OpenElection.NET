@@ -8,6 +8,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenVote.iOS", "OpenVote\OpenVote.iOS\OpenVote.iOS.csproj", "{D441E48A-6E1A-4D94-A27E-5EDE1562D89A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenVote.Forms", "OpenVote\OpenVote.Forms\OpenVote.Forms.csproj", "{57A9E9CE-DD82-42BC-BD5A-CE55086AD954}"
+	ProjectSection(ProjectDependencies) = postProject
+		{99B8B509-A43B-4CE4-8AEA-CD11848C1E14} = {99B8B509-A43B-4CE4-8AEA-CD11848C1E14}
+		{124635F5-81CC-4619-9FDF-B4A0C1869D4F} = {124635F5-81CC-4619-9FDF-B4A0C1869D4F}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenVote.Shared", "OpenVote\OpenVote.Shared\OpenVote.Shared.csproj", "{BDFCF6D3-861D-4069-AE26-FFE362DBD49F}"
 EndProject

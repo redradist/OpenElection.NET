@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 using OpenVote.Shared.Social;
 
-namespace OpenVote
+namespace OpenVote.Forms
 {
     public class AuthenticationState
     {
@@ -18,7 +18,7 @@ namespace OpenVote
     }
 }
 
-namespace OpenVote.Views
+namespace OpenVote.Forms.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
