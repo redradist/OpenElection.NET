@@ -2,6 +2,7 @@
 using Android.Content.PM;
 using Android.OS;
 using OpenVote.Forms;
+using Xamarin.Auth;
 
 namespace OpenVote.Android
 {
@@ -18,7 +19,11 @@ namespace OpenVote.Android
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
+            // NOTE(redra): Experimental feature with FastRenderers
+            //global::Xamarin.Forms.Forms.SetFlags("FastRenderers_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, savedInstanceState);
+            CustomTabsConfiguration.CustomTabsClosingMessage = null;
             LoadApplication(new App());
         }
     }

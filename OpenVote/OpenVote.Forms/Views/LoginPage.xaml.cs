@@ -34,7 +34,8 @@ namespace OpenVote.Forms.Views
 
         private async void SignUpButton_Clicked(object sender, EventArgs eventArgs)
         {
-            await DisplayAlert("Alert", "SignUp Button Clicked !!", "OK");
+            await Navigation.PushAsync(new SignUp());
+            //await DisplayAlert("Alert", "SignUp Button Clicked !!", "OK");
         }
 
         private async void LoginButton_Clicked(object sender, EventArgs eventArgs)
@@ -53,6 +54,16 @@ namespace OpenVote.Forms.Views
                 {
                     passwordEntry.IsEnabled = true;
                 }
+            }
+        }
+
+        private void PasswordEntry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            // Check if user exists by checking in online
+            Entry passwordEntry = FindByName("passwordEntry") as Entry;
+            if (passwordEntry != null && !string.IsNullOrEmpty(passwordEntry.Text))
+            {
+
             }
         }
 
@@ -176,10 +187,10 @@ namespace OpenVote.Forms.Views
             // Check if user exists by checking in online
             var authenticator = new OAuth2Authenticator
             (
-                clientId: "363833957743396",
+                clientId: Constants.FacebookClientId,
                 scope: "",
-                authorizeUrl: new Uri("https://m.facebook.com/dialog/oauth"),
-                redirectUrl: new Uri("https://www.facebook.com/connect/login_success.html")
+                authorizeUrl: new Uri(Constants.FacebookAuthorizeUrl),
+                redirectUrl: new Uri(Constants.FacebookCustomRedirectUrl)
             );
             authenticator.Completed += FacebookLogin_Complete;
             authenticator.Error += FacebookLogin_Error;
