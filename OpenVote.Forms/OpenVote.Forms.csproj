@@ -15,7 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="$(SolutionDir)\OpenVote.Shared\OpenVote.Shared.csproj" />
+    <ProjectReference Include="$(SolutionDir)\shared.net\OpenVote.Shared.csproj" Condition="Exists('$(SolutionDir)\shared.net\')" />
+    <ProjectReference Include="$(SolutionDir)\OpenVote.Shared\OpenVote.Shared.csproj" Condition="Exists('$(SolutionDir)\OpenVote.Shared\')" />
   </ItemGroup>
 
   <ItemGroup>

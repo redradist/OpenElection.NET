@@ -150,11 +150,11 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\OpenVote.Forms\OpenVote.Forms.csproj">
-      <Project>{57A9E9CE-DD82-42BC-BD5A-CE55086AD954}</Project>
+      <Project>{e7a58324-891e-4c68-ba1b-2b402c448ec2}</Project>
       <Name>OpenVote.Forms</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

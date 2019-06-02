@@ -64,7 +64,7 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomUrlSchemeInterceptorActivity .cs" />
+    <Compile Include="CustomUrlSchemeInterceptorActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,7 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OpenVote.Forms\OpenVote.Forms.csproj">
-      <Project>{57A9E9CE-DD82-42BC-BD5A-CE55086AD954}</Project>
+      <Project>{E7A58324-891E-4C68-BA1B-2B402C448EC2}</Project>
       <Name>OpenVote.Forms</Name>
     </ProjectReference>
   </ItemGroup>
